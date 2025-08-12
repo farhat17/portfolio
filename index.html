@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description"
+        content="Portfolio of Farhat Raina, a Full-Stack Web Developer skilled in React, Node.js, and Django, based in Anantnag, India.">
+    <meta property="og:title" content="Farhat Raina — Full-Stack Web Developer">
+    <meta property="og:description" content="Explore my projects and skills in React, Node.js, and Django.">
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg">
+    <meta property="og:url" content="https://yourdomain.com">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+        as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Farhat Raina — Full-Stack Web Developer</title>
+    <style>
+        :root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --accent: #06b6d4;
+            --muted: #9ca3af;
+            --glass: rgba(255, 255, 255, 0.04);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Inter, system-ui, Segoe UI, Roboto, Arial;
+            color: #e6eef6;
+            background: linear-gradient(180deg, #071024 0%, #081226 60%);
+            line-height: 1.6;
+        }
+
+        .site {
+            max-width: 1100px;
+            margin: 2vw auto;
+            padding: clamp(10px, 3vw, 20px);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: clamp(16px, 3vw, 26px);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .brand {
+            display: flex;
+            gap: clamp(8px, 1.5vw, 12px);
+            align-items: center;
+        }
+
+        .logo {
+            width: clamp(40px, 6vw, 52px);
+            height: clamp(40px, 6vw, 52px);
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent), #0ea5a4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #021025;
+            font-weight: 700;
+            font-size: clamp(16px, 2.5vw, 20px);
+        }
+
+        .brand h1 {
+            font-size: clamp(16px, 2.5vw, 20px);
+            color: #fff;
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: clamp(12px, 1.8vw, 14px);
+        }
+
+        nav a {
+            color: var(--muted);
+            margin-left: clamp(10px, 1.5vw, 14px);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr minmax(280px, 360px);
+            gap: clamp(16px, 2vw, 24px);
+            align-items: start;
+            margin-bottom: clamp(20px, 3vw, 28px);
+        }
+
+        .intro h2 {
+            color: #fff;
+            font-size: clamp(24px, 4vw, 34px);
+            font-weight: 700;
+            margin-bottom: clamp(8px, 1.5vw, 12px);
+        }
+
+        .intro p {
+            color: var(--muted);
+            font-size: clamp(14px, 2vw, 16px);
+        }
+
+        .cta {
+            margin-top: clamp(12px, 2vw, 16px);
+            display: flex;
+            gap: clamp(8px, 1.5vw, 10px);
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: var(--accent);
+            color: #042028;
+            padding: clamp(8px, 1.5vw, 10px) clamp(12px, 2vw, 14px);
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: clamp(14px, 2vw, 16px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+
+        .btn.ghost {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .sidebar {
+            background: var(--card);
+            padding: clamp(12px, 2vw, 18px);
+            border-radius: 12px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: clamp(6px, 1vw, 8px);
+            margin-top: clamp(8px, 1.5vw, 10px);
+        }
+
+        .skill {
+            background: var(--glass);
+            padding: clamp(4px, 1vw, 6px) clamp(8px, 1.5vw, 10px);
+            border-radius: 999px;
+            font-weight: 600;
+            color: #dff6f8;
+            font-size: clamp(11px, 1.8vw, 13px);
+        }
+
+        .sections {
+            display: grid;
+            grid-template-columns: 1fr minmax(260px, 320px);
+            gap: clamp(12px, 2vw, 20px);
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: clamp(12px, 2vw, 18px);
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            margin-bottom: clamp(8px, 1.5vw, 10px);
+            color: var(--accent);
+            font-size: clamp(16px, 2.5vw, 18px);
+        }
+
+        .project {
+            border-radius: 10px;
+            padding: clamp(8px, 1.5vw, 12px);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+            margin-bottom: clamp(8px, 1.5vw, 12px);
+        }
+
+        .project h4 {
+            font-size: clamp(14px, 2vw, 16px);
+            font-weight: 600;
+        }
+
+        .experience .job {
+            margin-bottom: clamp(8px, 1.5vw, 12px);
+        }
+
+        footer {
+            margin-top: clamp(20px, 3vw, 28px);
+            text-align: center;
+            color: var(--muted);
+            font-size: clamp(11px, 1.8vw, 13px);
+        }
+
+        .nav-toggle {
+            display: none;
+        }
+
+        .nav-toggle-label {
+            display: none;
+            cursor: pointer;
+            font-size: clamp(20px, 3vw, 24px);
+            color: var(--accent);
+            padding: 8px;
+        }
+
+        button:focus,
+        a:focus,
+        input:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .quick-facts {
+            margin-top: clamp(16px, 2vw, 22px);
+        }
+
+        @media (max-width: 980px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .sections {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-toggle-label {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: var(--card);
+                padding: clamp(10px, 2vw, 15px);
+                border-radius: 8px;
+                margin-top: 10px;
+            }
+
+            .nav-toggle:checked+.nav-toggle-label+.nav-menu {
+                display: flex;
+            }
+
+            .nav-menu a {
+                margin: clamp(8px, 1.5vw, 10px) 0;
+                font-size: clamp(14px, 2vw, 16px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .site {
+                padding: clamp(8px, 2vw, 12px);
+            }
+
+            .hero {
+                gap: clamp(12px, 2vw, 16px);
+            }
+
+            .sections {
+                gap: clamp(10px, 1.5vw, 15px);
+            }
+
+            .intro h2 {
+                font-size: clamp(20px, 5vw, 28px);
+            }
+
+            .btn {
+                padding: clamp(6px, 1.2vw, 8px) clamp(10px, 1.8vw, 12px);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .site {
+                padding: clamp(5px, 1.5vw, 8px);
+            }
+
+            .logo {
+                width: clamp(32px, 8vw, 40px);
+                height: clamp(32px, 8vw, 40px);
+                font-size: clamp(14px, 3vw, 16px);
+            }
+
+            .brand h1 {
+                font-size: clamp(14px, 3vw, 16px);
+            }
+
+            .meta {
+                font-size: clamp(10px, 2.5vw, 12px);
+            }
+
+            .intro p {
+                font-size: clamp(12px, 2.5vw, 14px);
+            }
+
+            .btn {
+                font-size: clamp(12px, 2.5vw, 14px);
+            }
+
+            .skill {
+                font-size: clamp(10px, 2vw, 12px);
+            }
+        }
+
+        a.link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        a.link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="site" id="resume">
+        <header>
+            <div class="brand">
+                <div class="logo">FR</div>
+                <div>
+                    <h1>Farhat Raina</h1>
+                    <div class="meta">Full-Stack Web Developer — React • Node.js • Django</div>
+                </div>
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">☰</label>
+            <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+                <a href="#projects" aria-label="View projects">Projects</a>
+                <a href="#experience" aria-label="View experience">Experience</a>
+                <a href="#contact" aria-label="Contact Farhat">Contact</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="intro">
+                <h2>Building Responsive, Scalable & User-Centric Web Applications</h2>
+                <p>Experienced in designing and developing secure, high-performance web applications. Skilled in React,
+                    Node.js, and Django with strong expertise in REST API integration and performance optimization.</p>
+                <div class="cta">
+                    <a class="btn" href="https://drive.google.com/uc?export=download&id=1jDqv_z_KQMIEr97yYs9Y5gsi1so05Bqq
+" download="Farhat_Raina_Resume.pdf" aria-label="Download Farhat Raina's resume PDF">Download Resume</a>
+                    <button class="btn ghost" onclick="downloadResume()"
+                        aria-label="Generate Farhat Raina's resume as PDF">Generate Resume PDF</button>
+                    <a class="btn ghost" href="#contact">Contact Me</a>
+                </div>
+                <div class="quick-facts card">
+                    <h3>Quick Facts</h3>
+                    <p class="meta">3+ years of experience • Based in Anantnag, India • Open to remote work, Work from office</p>
+                </div>
+            </div>
+
+            <aside class="sidebar">
+                <h3>Contact</h3>
+                <div class="meta">farhatraina59@gmail.com<br>+91 96225 01923<br>Anantnag, India</div>
+                <h3 style="margin-top:12px">Skills</h3>
+                <div class="skills">
+                    <div class="skill">React</div>
+                    <div class="skill">Node.js</div>
+                    <div class="skill">Django</div>
+                    <div class="skill">HTML5</div>
+                    <div class="skill">CSS3</div>
+                    <div class="skill">MySQL</div>
+                    <div class="skill">REST APIs</div>
+                </div>
+                <h3 style="margin-top:12px">Links</h3>
+                <div class="meta">
+                    <a class="link" href="https://github.com/farhat17" target="_blank">GitHub</a><br>
+                    <a class="link" href="https://linkedin.com/in/farhatraina" target="_blank">LinkedIn</a>
+                </div>
+            </aside>
+        </section>
+
+        <section class="sections">
+            <div>
+                <div id="projects" class="card">
+                    <h3>Projects</h3>
+                    <div class="project">
+                        <h4>Multi-User Blogging Platform</h4>
+                        <p>React + Node.js + MySQL — Role-based authentication, content moderation, and fully responsive
+                            UI.</p>
+                    </div>
+                    <div class="project">
+                        <h4>WhatsApp Business API Integration</h4>
+                        <p>Node.js + React — Bulk messaging, template management, and analytics integration with Meta.
+                        </p>
+                    </div>
+                    <div class="project">
+                        <h4>Image & File Conversion Tool</h4>
+                        <p>Django — Format conversion, background removal, resizing, and JSON/CSV/XML batch processing.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="experience" class="card" style="margin-top:16px">
+                    <h3>Experience</h3>
+                    <div class="experience">
+                        <div class="job">
+                            <div style="font-weight:700">Web Developer — Zest In Solutions</div>
+                            <div class="meta">Chandigarh, India • Apr 2022 – Present</div>
+                            <p>Develop and maintain scalable web applications, integrate third-party APIs, and deliver
+                                optimized, responsive user interfaces.</p>
+                        </div>
+                        <div class="job">
+                            <div style="font-weight:700">Junior Web Developer — Zest In Solutions</div>
+                            <div class="meta">Chandigarh, India • Apr 2022 – 2023</div>
+                            <p>Contributed to e-commerce builds, WordPress deployments, and backend payment
+                                integrations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="card">
+                <h3>Education</h3>
+                <div class="meta">B.Tech in Computer Science — Punjab Technical University (GGI), 2021</div>
+                <div class="meta" style="margin-top:8px">Diploma in Computer Science — Govt Polytechnic College,
+                    Anantnag, 2018</div>
+                <h3 style="margin-top:12px">Contact</h3>
+                <div id="contact" class="meta">
+                    Email: <a class="link" href="mailto:farhatraina59@gmail.com">farhatraina59@gmail.com</a><br>
+                    GitHub: <a class="link" href="https://github.com/farhat17" target="_blank">github.com/farhat17</a>
+                </div>
+            </aside>
+        </section>
+
+        <footer>
+            Built with ❤ — <a class="link" href="https://github.com/farhat17" target="_blank">github.com/farhat17</a>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script>
+        function downloadResume() {
+            const element = document.getElementById('resume');
+            const opt = {
+                margin: 0.2,
+                filename: 'Farhat_Raina_Resume.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 3, useCORS: true },
+                jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
+</body>
+
+</html>
