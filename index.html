@@ -818,6 +818,37 @@
             transform: translateY(-3px);
         }
 
+        /* Resume Download Section */
+        .resume-section {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px;
+            margin-top: 40px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .resume-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--light);
+        }
+
+        .resume-section p {
+            color: var(--gray);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .resume-actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
         /* Responsive Styles */
         @media (max-width: 992px) {
             .hero-title {
@@ -886,6 +917,11 @@
                 flex-direction: column;
                 gap: 15px;
             }
+
+            .resume-actions {
+                flex-direction: column;
+                align-items: center;
+            }
         }
 
         @media (max-width: 576px) {
@@ -915,6 +951,10 @@
                 height: 40px;
                 font-size: 0.8rem;
             }
+
+            .resume-section {
+                padding: 25px;
+            }
         }
     </style>
 </head>
@@ -933,8 +973,9 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#experience">Experience</a></li>
+                    <li><a href="#resume">Resume</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+                    <li><a href="#resume" class="nav-cta">Download CV</a></li>
                 </ul>
             </nav>
             
@@ -961,8 +1002,8 @@
                     <a href="#projects" class="btn btn-primary">
                         <i class="fas fa-eye"></i> View My Work
                     </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-paper-plane"></i> Get In Touch
+                    <a href="#resume" class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download Resume
                     </a>
                 </div>
             </div>
@@ -1085,9 +1126,9 @@
                 <div class="project-card">
                     <div class="project-image"></div>
                     <div class="project-content">
-                        <h3 class="project-title">All In One Calculator</h3>
+                        <h3 class="project-title">Mobile App Icon Generator</h3>
                         <p class="project-description">
-                            All in one calculator for all calculations..
+                            A comprehensive tool for generating professional app icons for iOS, Android, React Native, and Flutter platforms.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">React</span>
@@ -1096,7 +1137,7 @@
                             <span class="tech-tag">Tailwind CSS</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://calculatoral.com" class="project-link">
+                            <a href="#" class="project-link">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                             <a href="#" class="project-link">
@@ -1120,7 +1161,7 @@
                             <span class="tech-tag">CSS3</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://favicony.com" class="project-link">
+                            <a href="#" class="project-link">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                             <a href="#" class="project-link">
@@ -1147,7 +1188,7 @@
                             <a href="#" class="project-link">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
-                            <a href="https://github.com/farhat17/Blog" class="project-link">
+                            <a href="#" class="project-link">
                                 <i class="fab fa-github"></i> Source Code
                             </a>
                         </div>
@@ -1199,6 +1240,30 @@
         </div>
     </section>
 
+    <!-- Resume Section -->
+    <section class="resume" id="resume">
+        <div class="container">
+            <h2 class="section-title">My Resume</h2>
+            
+            <div class="resume-section">
+                <h3>Download My Resume</h3>
+                <p>Get a comprehensive overview of my skills, experience, and qualifications. Choose your preferred format below.</p>
+                
+                <div class="resume-actions">
+                    <a class="btn btn-primary" href="https://drive.google.com/uc?export=download&id=1jDqv_z_KQMIEr97yYs9Y5gsi1so05Bqq" download="Farhat_Raina_Resume.pdf">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                    <button class="btn btn-secondary" onclick="downloadResume()">
+                        <i class="fas fa-file-pdf"></i> Generate PDF
+                    </button>
+                    <a class="btn btn-secondary" href="#contact">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -1237,10 +1302,10 @@
                     </div>
                     
                     <div class="social-links">
-                        <a href="#" class="social-link">
+                        <a href="https://github.com/farhat17" class="social-link" target="_blank">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="https://linkedin.com/in/farhat-raina" class="social-link" target="_blank">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                         <a href="#" class="social-link">
@@ -1294,6 +1359,7 @@
                     <a href="#about" class="footer-link">About</a>
                     <a href="#projects" class="footer-link">Projects</a>
                     <a href="#experience" class="footer-link">Experience</a>
+                    <a href="#resume" class="footer-link">Resume</a>
                     <a href="#contact" class="footer-link">Contact</a>
                 </div>
             </div>
@@ -1308,6 +1374,9 @@
     <a href="#" class="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </a>
+
+    <!-- Include html2pdf library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 
     <script>
         // Header scroll effect
@@ -1416,36 +1485,102 @@
         }
         
         window.addEventListener('scroll', setActiveNavLink);
+
+        // Download Resume as PDF function
+        function downloadResume() {
+            // Create a temporary element to hold resume content
+            const resumeContent = document.createElement('div');
+            resumeContent.style.padding = '20px';
+            resumeContent.style.fontFamily = 'Arial, sans-serif';
+            resumeContent.style.color = '#333';
+            
+            resumeContent.innerHTML = `
+                <h1 style="text-align: center; color: #06b6d4; margin-bottom: 10px;">Farhat Raina</h1>
+                <h2 style="text-align: center; color: #666; margin-bottom: 20px;">Full-Stack Web Developer</h2>
+                
+                <div style="margin-bottom: 20px;">
+                    <p style="text-align: center;">
+                        <strong>Email:</strong> farhatraina59@gmail.com | 
+                        <strong>Phone:</strong> +91 96225 01923 | 
+                        <strong>Location:</strong> Anantnag, India
+                    </p>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #06b6d4; border-bottom: 2px solid #06b6d4; padding-bottom: 5px;">Professional Summary</h3>
+                    <p>
+                        Experienced Full-Stack Developer with 3+ years of expertise in building responsive, scalable web applications. 
+                        Proficient in React, Node.js, Django, and modern web technologies. Passionate about creating user-centric solutions 
+                        and optimizing application performance.
+                    </p>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #06b6d4; border-bottom: 2px solid #06b6d4; padding-bottom: 5px;">Technical Skills</h3>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div style="width: 48%;">
+                            <h4>Frontend</h4>
+                            <ul>
+                                <li>React</li>
+                                <li>JavaScript</li>
+                                <li>HTML5/CSS3</li>
+                                <li>Tailwind CSS</li>
+                                <li>Bootstrap</li>
+                            </ul>
+                        </div>
+                        <div style="width: 48%;">
+                            <h4>Backend</h4>
+                            <ul>
+                                <li>Node.js</li>
+                                <li>Django</li>
+                                <li>Python</li>
+                                <li>PHP</li>
+                                <li>MySQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #06b6d4; border-bottom: 2px solid #06b6d4; padding-bottom: 5px;">Work Experience</h3>
+                    <div style="margin-bottom: 15px;">
+                        <h4>Web Developer - Zest In Solutions</h4>
+                        <p><em>April 2022 - Present</em></p>
+                        <p>Develop and maintain scalable web applications, integrate third-party APIs, and deliver optimized, responsive user interfaces.</p>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <h4>Junior Web Developer - Zest In Solutions</h4>
+                        <p><em>April 2022 - 2023</em></p>
+                        <p>Contributed to e-commerce builds, WordPress deployments, and backend payment integrations.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #06b6d4; border-bottom: 2px solid #06b6d4; padding-bottom: 5px;">Education</h3>
+                    <p><strong>B.Tech in Computer Science</strong> - Punjab Technical University (GGI), 2021</p>
+                    <p><strong>Diploma in Computer Science</strong> - Govt Polytechnic College, Anantnag, 2018</p>
+                </div>
+                
+                <div>
+                    <h3 style="color: #06b6d4; border-bottom: 2px solid #06b6d4; padding-bottom: 5px;">Projects</h3>
+                    <p><strong>Mobile App Icon Generator</strong> - Comprehensive tool for generating professional app icons</p>
+                    <p><strong>Text to Favicon Generator</strong> - Online tool to create custom favicons from text</p>
+                    <p><strong>Multi-User Blogging Platform</strong> - React + Node.js + MySQL blogging platform</p>
+                </div>
+            `;
+            
+            // Configure html2pdf options
+            const opt = {
+                margin: 0.5,
+                filename: 'Farhat_Raina_Resume.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            
+            // Generate and download PDF
+            html2pdf().set(opt).from(resumeContent).save();
+        }
     </script>
-    <script>
-document.getElementById('contactForm').addEventListener('submit', async (e) => {
-  e.preventDefault();
-
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const subject = document.getElementById('subject').value.trim();
-  const message = document.getElementById('message').value.trim();
-
-  try {
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, subject, message })
-    });
-
-    const data = await res.json();
-
-    if (res.ok) {
-      alert(data.message);
-      e.target.reset();
-    } else {
-      alert(data.error || 'Failed to send message.');
-    }
-  } catch (err) {
-    alert('Network error. Try again later.');
-  }
-});
-</script>
-
 </body>
 </html>
