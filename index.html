@@ -1085,9 +1085,9 @@
                 <div class="project-card">
                     <div class="project-image"></div>
                     <div class="project-content">
-                        <h3 class="project-title">Mobile App Icon Generator</h3>
+                        <h3 class="project-title">All In Calculator</h3>
                         <p class="project-description">
-                            A comprehensive tool for generating professional app icons for iOS, Android, React Native, and Flutter platforms.
+                            All in Calculator for all calculations..
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">React</span>
@@ -1096,7 +1096,7 @@
                             <span class="tech-tag">Tailwind CSS</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">
+                            <a href="https://calculatoral.com" class="project-link">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                             <a href="#" class="project-link">
@@ -1120,7 +1120,7 @@
                             <span class="tech-tag">CSS3</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">
+                            <a href="https://favicony.com" class="project-link">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                             <a href="#" class="project-link">
@@ -1147,7 +1147,7 @@
                             <a href="#" class="project-link">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
-                            <a href="#" class="project-link">
+                            <a href="https://github.com/farhat17/Blog" class="project-link">
                                 <i class="fab fa-github"></i> Source Code
                             </a>
                         </div>
@@ -1417,5 +1417,35 @@
         
         window.addEventListener('scroll', setActiveNavLink);
     </script>
+    <script>
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const subject = document.getElementById('subject').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, subject, message })
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      alert(data.message);
+      e.target.reset();
+    } else {
+      alert(data.error || 'Failed to send message.');
+    }
+  } catch (err) {
+    alert('Network error. Try again later.');
+  }
+});
+</script>
+
 </body>
 </html>

@@ -1,0 +1,9 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "api/contact.js",
+  "type": "module",
+  "dependencies": {
+    "nodemailer": "^6.10.1"
+  }
+}
